@@ -1,8 +1,8 @@
 cask 'intel-power-gadget' do
-  version '3.5.1,613985'
-  sha256 '0cc508919bf7a55686c070e7f3d41798d4f5b0fdb9a33e8d692fe8b391b45dfd'
+  version '3.5.4,770353'
+  sha256 '761f7dd4de7cd7150e6abfedba08f4b1da3a04dc571992dd46b3aca6f699f734'
 
-  url "https://software.intel.com/file/#{version.after_comma}/download?#.dmg"
+  url "https://software.intel.com/file/#{version.after_comma}/download"
   name 'Intel Power Gadget'
   homepage 'https://software.intel.com/en-us/articles/intel-power-gadget-20'
 

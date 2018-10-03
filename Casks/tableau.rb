@@ -1,6 +1,6 @@
 cask 'tableau' do
-  version '10.5.2'
-  sha256 '510811918d00c5d9f654e136fe9d6154fc621c2abcad019a073455e6213489ff'
+  version '2018.2.0'
+  sha256 '1a27af07d8fc3c5dc1db9befa40e761f73deba4d48fbf595206d5ea637194eb2'
 
   url "https://downloads.tableau.com/tssoftware/TableauDesktop-#{version.dots_to_hyphens}.dmg"
   name 'Tableau Desktop'
@@ -13,10 +13,11 @@ cask 'tableau' do
   uninstall pkgutil: [
                        'com.amazon.redshiftodbc',
                        'simba.sparkodbc',
+                       'com.simba.sparkodbc',
                        'com.simba.sqlserverodbc',
                        'com.tableausoftware.Desktop.app',
                        'com.tableausoftware.DesktopShortcut',
-                       'com.tableausoftware.FLEXNet.11.14.0',
+                       'com.tableausoftware.FLEXNet.11.*',
                        'com.tableausoftware.mysql',
                        'com.tableausoftware.oracle',
                        'com.tableausoftware.postgresql',

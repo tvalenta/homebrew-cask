@@ -1,8 +1,9 @@
 cask 'ableton-live-lite' do
-  version '10.0.1'
-  sha256 'b4c0d7dfc4e05eddf1cab6a831962f8aad355fafc36c512112dc0e820a2f2c61'
+  version '10.0.3'
+  sha256 '811aa0eac9cad0ae6a52045b2fafb5457f9c32586ba57bbef1b617641968c868'
 
   url "http://cdn-downloads.ableton.com/channels/#{version}/ableton_live_lite_#{version}_64.dmg"
+  appcast "https://www.ableton.com/en/release-notes/live-#{version.major}/"
   name 'Ableton Live Lite'
   homepage 'https://www.ableton.com/en/products/live-lite/'
 

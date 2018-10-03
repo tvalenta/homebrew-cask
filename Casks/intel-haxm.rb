@@ -1,8 +1,10 @@
 cask 'intel-haxm' do
-  version '6.2.1,a0:49'
-  sha256 '18a5c08a61f711ac1ce824feebfaa5819aabbe7e03ee4638f3edd6f0c34b69d9'
+  version '7.3.0'
+  sha256 'f73f97679ca9b54369b95120209d3fd5fe12144e275c8e50248249562505349f'
 
-  url "https://software.intel.com/sites/default/files/managed/#{version.after_comma.before_colon}/#{version.after_colon}/haxm-macosx_v#{version.before_comma.dots_to_underscores}.zip"
+  # github.com/intel/haxm was verified as official when first introduced to the cask
+  url "https://github.com/intel/haxm/releases/download/v#{version}/haxm-macosx_v#{version.dots_to_underscores}.zip"
+  appcast 'https://github.com/intel/haxm/releases.atom'
   name 'Intel HAXM'
   homepage 'https://software.intel.com/en-us/android/articles/intel-hardware-accelerated-execution-manager'
 
@@ -18,9 +20,7 @@ cask 'intel-haxm' do
                       args:         ['-u'],
                     }
 
-  caveats <<~EOS
-    Installing this Cask means you have AGREED to the Intel® Hardware Accelerated Execution Manager End-User License Agreement - macOS at
-
-      https://software.intel.com/en-us/android/articles/intel-hardware-accelerated-execution-manager-end-user-license-agreement-macosx
-  EOS
+  caveats do
+    license 'https://software.intel.com/en-us/android/articles/intel-hardware-accelerated-execution-manager-end-user-license-agreement-macosx'
+  end
 end

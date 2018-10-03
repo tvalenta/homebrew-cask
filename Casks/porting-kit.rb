@@ -1,10 +1,9 @@
 cask 'porting-kit' do
-  version '2.9.323'
-  sha256 '0873b43b477aa041908ee079e3fe83eb3140436d2cefcdf728ef8c3e78b36365'
+  version '2.9.511'
+  sha256 '5733fa9112989cd364711629aed71ecea8a4ab0861904f36aeb25cf5a02e087d'
 
   url "http://portingkit.com/kit/Porting%20Kit%20#{version}.zip"
-  appcast 'http://portingkit.com/kit/updatecast.xml',
-          checkpoint: '3ed0bd8a8c531adaa791057ca88db0f6d3d360f436ea028d67c9a816727d9ece'
+  appcast 'http://portingkit.com/kit/updatecast.xml'
   name 'Porting Kit'
   homepage 'http://portingkit.com/en/'
 
@@ -21,5 +20,6 @@ cask 'porting-kit' do
                '~/Library/Cookies/edu.ufrj.vitormm.Porting-Kit.binarycookies',
                '~/Library/Preferences/edu.ufrj.vitormm.Porting-Kit.plist',
                '~/Library/Saved Application State/edu.ufrj.vitormm.Porting-Kit.savedState',
+               '~/Library/WebKit/edu.ufrj.vitormm.Porting-Kit',
              ]
 end

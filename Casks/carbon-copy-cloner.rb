@@ -1,9 +1,10 @@
 cask 'carbon-copy-cloner' do
-  version '5.0.9.5267'
-  sha256 'bf4093b3aaa123544f78f3b98bf43bf538a6f7931c995a98b8bfb48e07d03165'
+  version '5.1.5.5549'
+  sha256 '682eae2b7f0ae47a35295bd880b1b51f5b1c7af65bf6c4b4a1181f46f57965e7'
 
   # bombich.scdn1.secure.raxcdn.com/software/files was verified as official when first introduced to the cask
   url "https://bombich.scdn1.secure.raxcdn.com/software/files/ccc-#{version}.zip"
+  appcast "https://bombich.com/software/updates/ccc.php?os_major=10&os_minor=14&os_bugfix=0&ccc=#{version.split('.').last}&beta=0"
   name 'Carbon Copy Cloner'
   homepage 'https://bombich.com/'
 

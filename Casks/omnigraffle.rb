@@ -1,11 +1,18 @@
 cask 'omnigraffle' do
-  version '7.7.1'
-  sha256 '0ddf72859b3ded2a251d57ffc1b01cc23fa361c2ccbe2438e807ed6238d4a51d'
+  if MacOS.version <= :sierra
+    version '7.8.2'
+    sha256 'ab463ea6c12d49c4104d3814ac3280d0359072702d4751f5074f644fc79de0c6'
+    url "https://downloads.omnigroup.com/software/MacOSX/10.12/OmniGraffle-#{version}.dmg"
+  else
+    version '7.9'
+    sha256 '5fed5d99cc826e1f99654abf0ab4c4f0a079505cde69b388a4073348530058f0'
+    url "https://downloads.omnigroup.com/software/MacOSX/10.13/OmniGraffle-#{version}.dmg"
+  end
 
-  url "https://downloads.omnigroup.com/software/MacOSX/10.12/OmniGraffle-#{version}.dmg"
   name 'OmniGraffle'
   homepage 'https://www.omnigroup.com/omnigraffle/'
 
+  auto_updates true
   depends_on macos: '>= :sierra'
 
   app 'OmniGraffle.app'

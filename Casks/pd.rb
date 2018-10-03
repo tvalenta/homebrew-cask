@@ -1,10 +1,9 @@
 cask 'pd' do
-  version '0.48-0'
-  sha256 'a58b039b928e082df36b12c711c5373fe2e64a8015403166c15ef72696d6179a'
+  version '0.48-2'
+  sha256 '7b000f68674bcbc333a7dfe0fac33d16d8c021f091cdff03eb1ef5d4181c056b'
 
   url "http://msp.ucsd.edu/Software/pd-#{version}.mac.tar.gz"
-  appcast 'http://msp.ucsd.edu/software.html',
-          checkpoint: 'a527e66ce475915b9ecc2b37b777daecb5288b040dc5c2a13d7004ec138cb375'
+  appcast 'http://msp.ucsd.edu/software.html'
   name 'Pd'
   homepage 'http://msp.ucsd.edu/software.html'
 

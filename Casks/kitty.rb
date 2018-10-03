@@ -1,12 +1,17 @@
 cask 'kitty' do
-  version '0.8.4'
-  sha256 'a116197a8c1807455f53494674c28de33d09ca484709819a6d3f0a8f4e9e659e'
+  version '0.12.3'
+  sha256 '0ce3f543e9b605ca16b8153218b283a2a13351c09499feaccfcffb42f39f7416'
 
   url "https://github.com/kovidgoyal/kitty/releases/download/v#{version}/kitty-#{version}.dmg"
-  appcast 'https://github.com/kovidgoyal/kitty/releases.atom',
-          checkpoint: '7749a4e546bd871aafbf7e5ee8b4598ee71191eff58736a93a531eed3000823e'
+  appcast 'https://github.com/kovidgoyal/kitty/releases.atom'
   name 'kitty'
   homepage 'https://github.com/kovidgoyal/kitty'
 
   app 'kitty.app'
+
+  zap trash: [
+               '~/.config/kitty',
+               '~/Library/Preferences/kitty',
+               '~/Library/Saved Application State/net.kovidgoyal.kitty.savedState',
+             ]
 end

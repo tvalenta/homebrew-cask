@@ -1,14 +1,14 @@
 cask 'little-snitch' do
-  version '4.0.6'
-  sha256 'c8d21ad4efc2a0625574f8e6dbe5c79b59fb91468c7abae7581d9a58d24c1ff7'
+  version '4.2.1'
+  sha256 '8ae25660d561789b7f55812266d60e3b96ca18ac0645e2c3fb668378292c4a8d'
 
   url "https://www.obdev.at/downloads/littlesnitch/LittleSnitch-#{version}.dmg"
-  appcast 'https://www.obdev.at/products/littlesnitch/releasenotes.html',
-          checkpoint: '2098e2706d5b9dfb73960931c22f9dbe455fc7a0785a3d9d574c7d2edf3e8338'
+  appcast 'https://www.obdev.at/products/littlesnitch/releasenotes.html'
   name 'Little Snitch'
   homepage 'https://www.obdev.at/products/littlesnitch/index.html'
 
   auto_updates true
+  conflicts_with cask: 'little-snitch-nightly'
   depends_on macos: '>= :el_capitan'
   container type: :naked
 

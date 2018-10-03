@@ -1,6 +1,6 @@
 cask 'krita' do
-  version '4.0.0'
-  sha256 '5a156554b7a38f05bec392b1e5269c81ee55d0c48d6812a0b67138d700714df6'
+  version '4.1.3'
+  sha256 'bdb3817cce26f6080c1532b1943be6aca73b2e583741520bac3df4b8aec796ad'
 
   # kde.org/stable/krita was verified as official when first introduced to the cask
   url "http://download.kde.org/stable/krita/#{version}/krita-#{version}.dmg"
@@ -9,7 +9,7 @@ cask 'krita' do
 
   depends_on macos: '>= :el_capitan'
 
-  app 'Krita.app'
+  app 'krita.app'
 
   zap trash: [
                '~/Library/Application Support/krita',

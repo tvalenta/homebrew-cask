@@ -1,6 +1,6 @@
 cask 'omniplan' do
-  version '3.9.2'
-  sha256 'a96ac0fcb37f1c48f2160ad0c7658535573a089a84786d6d3a489636736c4498'
+  version '3.10'
+  sha256 '5fa8aac3347f540de924f60c96327fa519a0fb37435887cab086fe33acf137b8'
 
   url "https://downloads.omnigroup.com/software/MacOSX/10.12/OmniPlan-#{version}.dmg"
   name 'OmniPlan'

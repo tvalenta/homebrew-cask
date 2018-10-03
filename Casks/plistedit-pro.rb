@@ -1,8 +1,9 @@
 cask 'plistedit-pro' do
-  version :latest
-  sha256 :no_check
+  version '1.9'
+  sha256 '5000b560958cc14a92cc44456e37e2e6ef9c73cf9037c30e1516dd152f2cb2ed'
 
   url 'https://www.fatcatsoftware.com/plisteditpro/PlistEditPro.zip'
+  appcast 'https://www.fatcatsoftware.com/plisteditpro/plisteditpro_appcast.xml'
   name 'PlistEdit Pro'
   homepage 'https://www.fatcatsoftware.com/plisteditpro/'
 

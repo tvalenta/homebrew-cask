@@ -1,15 +1,14 @@
 cask 'cleanmymac' do
-  version '3.9.4,1518187718'
-  sha256 '6bd7310bc9c2c5ed4feec6c0de76ddcc3ad3695ebf2bb0cfcbf4c06e166f5e5a'
+  version '4.0.2,1536850184'
+  sha256 '27d32e4119e2eaec76b726e7d27076a425c7def781dcdc30b040a6e42ba74729'
 
   # devmate.com/com.macpaw.CleanMyMac was verified as official when first introduced to the cask
-  url "https://dl.devmate.com/com.macpaw.CleanMyMac#{version.major}/#{version.major_minor_patch}/#{version.after_comma}/CleanMyMac3-#{version.major_minor_patch}.zip"
-  appcast "https://updates.devmate.com/com.macpaw.CleanMyMac#{version.major}.xml",
-          checkpoint: '3f595aa2bdbd3c16c45499f5e7e9553b7100f906f974bae5f25a791d6b118e27'
-  name 'CleanMyMac'
+  url "https://dl.devmate.com/com.macpaw.CleanMyMac#{version.major}/#{version.major_minor_patch}/#{version.after_comma}/CleanMyMacX-#{version.major_minor_patch}.zip"
+  appcast "https://updates.devmate.com/com.macpaw.CleanMyMac#{version.major}.xml"
+  name 'CleanMyMac X'
   homepage 'https://macpaw.com/cleanmymac'
 
-  app "CleanMyMac #{version.major}.app"
+  app 'CleanMyMac X.app'
 
   uninstall delete:     [
                           "/Library/PrivilegedHelperTools/com.macpaw.CleanMyMac#{version.major}.Agent",

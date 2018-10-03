@@ -1,24 +1,23 @@
 cask 'lulu' do
-  version '0.9.3'
-  sha256 '6309a469e3620cd4a3934ae0e417be7d8d3f9b6fe9f363561c01235ae57c9486'
+  version '1.1.0'
+  sha256 'd6e86dee0564811aac7a5ad305fe18697ff3dde0fd8777301610eb99e6a88fbf'
 
-  # github.com/objective-see/LuLu was verified as official when first introduced to the cask
-  url "https://github.com/objective-see/LuLu/releases/download/#{version}/LuLu_#{version.dots_to_underscores}.zip"
-  appcast 'https://github.com/objective-see/LuLu/releases.atom',
-          checkpoint: '4e2de04ea705b61437a010ac87cace16459a6d3fed55148a01f62148d64f9a19'
+  # bitbucket.org/objective-see was verified as official when first introduced to the cask
+  url "https://bitbucket.org/objective-see/deploy/downloads/LuLu_#{version}.zip"
+  appcast 'https://objective-see.com/products/changelogs/LuLu.txt'
   name 'LuLu'
   homepage 'https://objective-see.com/products/lulu.html'
 
   depends_on macos: '>= :yosemite'
 
   installer script: {
-                      executable: "#{staged_path}/Lulu Installer.app/Contents/Resources/configure.sh",
+                      executable: "#{staged_path}/Lulu Installer.app/Contents/MacOS/LuLu Installer",
                       args:       ['-install'],
                       sudo:       true,
                     }
 
   uninstall script: {
-                      executable: "#{staged_path}/Lulu Installer.app/Contents/Resources/configure.sh",
+                      executable: "#{staged_path}/Lulu Installer.app/Contents/MacOS/LuLu Installer",
                       args:       ['-uninstall'],
                       sudo:       true,
                     }

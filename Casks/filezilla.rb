@@ -1,10 +1,9 @@
 cask 'filezilla' do
-  version '3.31.0'
-  sha256 '188e8d9af77dbcdd6176fb7eeca19083fff6f22e41331a1927c78c73c1faa769'
+  version '3.37.3'
+  sha256 '6dcb449f198481b2d3639f47efaf4684f0beea801184c1d1f64943383bc4810c'
 
   url "https://download.filezilla-project.org/client/FileZilla_#{version}_macosx-x86.app.tar.bz2"
-  appcast 'https://filezilla-project.org/versions.php?type=client',
-          checkpoint: '9b1a081a82ba46468494ab610ca341f26790ccc431193bda585571cf9ca722e0'
+  appcast 'https://filezilla-project.org/versions.php?type=client'
   name 'FileZilla'
   homepage 'https://filezilla-project.org/'
 

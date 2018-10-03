@@ -1,11 +1,10 @@
 cask 'flash-player-debugger-npapi' do
-  version '29.0.0.113'
-  sha256 '2d92ef4ddbef26bab26dd907a6b77ca105029398f2995f2e39810479372631c1'
+  version '31.0.0.108'
+  sha256 '7196bd475b989505945bde5ec86c1792b056a6e6d5501b34ccae50f4fe6d93c8'
 
   # macromedia.com was verified as official when first introduced to the cask
   url "https://fpdownload.macromedia.com/pub/flashplayer/updaters/#{version.major}/flashplayer_#{version.major}_plugin_debug.dmg"
-  appcast 'http://fpdownload2.macromedia.com/get/flashplayer/update/current/xml/version_en_mac_pl.xml',
-          checkpoint: 'a617234c8f9b680bc5d5f4ac249faf8d23cfc43f9d171a7665405b4a26f2c502'
+  appcast 'http://fpdownload2.macromedia.com/get/flashplayer/update/current/xml/version_en_mac_pl.xml'
   name 'Adobe Flash Player NPAPI (plugin for Safari and Firefox) content debugger'
   homepage 'https://www.adobe.com/support/flashplayer/debug_downloads.html'
 

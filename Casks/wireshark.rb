@@ -1,10 +1,9 @@
 cask 'wireshark' do
-  version '2.4.5'
-  sha256 '028592817849f180f4014288a9566910e4ab508cb3b53a9721c9c667379acd15'
+  version '2.6.3'
+  sha256 '5f919d58ba1286631f2a878d7ec5acf430680f57d3d630d76e096077b4494418'
 
   url "https://www.wireshark.org/download/osx/Wireshark%20#{version}%20Intel%2064.dmg"
-  appcast 'https://www.wireshark.org/download/osx/',
-          checkpoint: 'd7e3d149e596bc245ecda422f1ad7114a58d09da9167ab622f9d593f92fef11c'
+  appcast 'https://www.wireshark.org/download/osx/'
   name 'Wireshark'
   homepage 'https://www.wireshark.org/'
 
@@ -12,17 +11,6 @@ cask 'wireshark' do
   depends_on macos: '>= :mountain_lion'
 
   pkg "Wireshark #{version} Intel 64.pkg"
-
-  postflight do
-    system_command '/usr/sbin/dseditgroup',
-                   args: [
-                           '-o', 'edit',
-                           '-a', Etc.getpwuid(Process.euid).name,
-                           '-t', 'user',
-                           '--', 'access_bpf'
-                         ],
-                   sudo: true
-  end
 
   uninstall_preflight do
     set_ownership '/Library/Application Support/Wireshark'

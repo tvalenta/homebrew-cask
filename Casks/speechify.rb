@@ -1,10 +1,9 @@
 cask 'speechify' do
-  version '2.0.16'
-  sha256 'a3ae4b96657f43f713cbd8e8b9a1fc0f58d7536c813b9bdd616a353fbf29f35a'
+  version '2.1.4'
+  sha256 '390f674e254e3a7e2131b2b159e211f22baf4e9d779f2380618f6d9e5ee425bb'
 
   url 'https://getspeechify.com/Speechify.zip'
-  appcast 'https://getspeechify.com/appcast.xml',
-          checkpoint: '3dcf421537183898f39f38d57e4e87ff0d73771f27649d9739c43de3c4f53520'
+  appcast 'https://getspeechify.com/appcast.xml'
   name 'Speechify'
   homepage 'https://getspeechify.com/'
 
